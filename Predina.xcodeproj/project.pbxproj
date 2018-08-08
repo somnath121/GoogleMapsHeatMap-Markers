@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4A550BBE3B909F7C947862D9 /* Pods_Predina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44B3B0832235367EF074A064 /* Pods_Predina.framework */; };
-		540F64FF2113D7AF00B1FFF5 /* realtimelocation.json in Resources */ = {isa = PBXBuildFile; fileRef = 540F64FD2113D7AE00B1FFF5 /* realtimelocation.json */; };
 		540F65002113D7AF00B1FFF5 /* Coordinates.json in Resources */ = {isa = PBXBuildFile; fileRef = 540F64FE2113D7AF00B1FFF5 /* Coordinates.json */; };
+		5476B564211A65C400D508ED /* realtimelocation.json in Resources */ = {isa = PBXBuildFile; fileRef = 5476B563211A65C400D508ED /* realtimelocation.json */; };
+		5476B566211A66F500D508ED /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5476B565211A66F500D508ED /* VehicleData.swift */; };
 		5485F7AB2113B23A00636DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5485F7AA2113B23A00636DE9 /* AppDelegate.swift */; };
 		5485F7AD2113B23A00636DE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5485F7AC2113B23A00636DE9 /* ViewController.swift */; };
 		5485F7B02113B23A00636DE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5485F7AE2113B23A00636DE9 /* Main.storyboard */; };
@@ -66,8 +67,9 @@
 		1C4C763A934E3750F3655779 /* Pods-Predina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Predina.release.xcconfig"; path = "Pods/Target Support Files/Pods-Predina/Pods-Predina.release.xcconfig"; sourceTree = "<group>"; };
 		38D601F1F422E1DC8E93687D /* Pods-Predina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Predina.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Predina/Pods-Predina.debug.xcconfig"; sourceTree = "<group>"; };
 		44B3B0832235367EF074A064 /* Pods_Predina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Predina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		540F64FD2113D7AE00B1FFF5 /* realtimelocation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = realtimelocation.json; sourceTree = "<group>"; };
 		540F64FE2113D7AF00B1FFF5 /* Coordinates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Coordinates.json; sourceTree = "<group>"; };
+		5476B563211A65C400D508ED /* realtimelocation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = realtimelocation.json; sourceTree = "<group>"; };
+		5476B565211A66F500D508ED /* VehicleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleData.swift; sourceTree = "<group>"; };
 		5485F7A72113B23A00636DE9 /* Predina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Predina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5485F7AA2113B23A00636DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5485F7AC2113B23A00636DE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -187,7 +189,6 @@
 		5485F79E2113B23900636DE9 = {
 			isa = PBXGroup;
 			children = (
-				549939172113C79900D1DE50 /* BridgingHeader.h */,
 				5485F7DC2113B3FE00636DE9 /* Podfile */,
 				5485F7A92113B23A00636DE9 /* Predina */,
 				5485F7BE2113B23F00636DE9 /* PredinaTests */,
@@ -214,12 +215,13 @@
 				549938B82113C6AC00D1DE50 /* Google-Maps-iOS-Utils */,
 				5485F7AA2113B23A00636DE9 /* AppDelegate.swift */,
 				5485F7AC2113B23A00636DE9 /* ViewController.swift */,
+				5476B565211A66F500D508ED /* VehicleData.swift */,
 				5485F7AE2113B23A00636DE9 /* Main.storyboard */,
 				5485F7B12113B23F00636DE9 /* Assets.xcassets */,
 				5485F7B32113B23F00636DE9 /* LaunchScreen.storyboard */,
 				5485F7B62113B23F00636DE9 /* Info.plist */,
 				540F64FE2113D7AF00B1FFF5 /* Coordinates.json */,
-				540F64FD2113D7AE00B1FFF5 /* realtimelocation.json */,
+				5476B563211A65C400D508ED /* realtimelocation.json */,
 				549938B62113C4CE00D1DE50 /* style.json */,
 			);
 			path = Predina;
@@ -246,6 +248,7 @@
 		549938B82113C6AC00D1DE50 /* Google-Maps-iOS-Utils */ = {
 			isa = PBXGroup;
 			children = (
+				549939172113C79900D1DE50 /* BridgingHeader.h */,
 				549938E32113C74600D1DE50 /* Clustering */,
 				549938C02113C74400D1DE50 /* Geometry */,
 				549938B92113C74300D1DE50 /* Heatmap */,
@@ -483,9 +486,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5476B564211A65C400D508ED /* realtimelocation.json in Resources */,
 				540F65002113D7AF00B1FFF5 /* Coordinates.json in Resources */,
 				5485F7DD2113B3FE00636DE9 /* Podfile in Resources */,
-				540F64FF2113D7AF00B1FFF5 /* realtimelocation.json in Resources */,
 				5485F7B52113B23F00636DE9 /* LaunchScreen.storyboard in Resources */,
 				5485F7B22113B23F00636DE9 /* Assets.xcassets in Resources */,
 				549938B72113C4CE00D1DE50 /* style.json in Resources */,
@@ -566,6 +569,7 @@
 				549939012113C74600D1DE50 /* GMUWeightedLatLng.m in Sources */,
 				549939152113C74600D1DE50 /* GMUDefaultClusterIconGenerator.m in Sources */,
 				5499390B2113C74600D1DE50 /* GMUPolygon.m in Sources */,
+				5476B566211A66F500D508ED /* VehicleData.swift in Sources */,
 				549939082113C74600D1DE50 /* GMULineString.m in Sources */,
 				549939022113C74600D1DE50 /* GMUGeoJSONParser.m in Sources */,
 				549939042113C74600D1DE50 /* GMUKMLParser.m in Sources */,
@@ -765,7 +769,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.somnath.Predina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = /Volumes/Partition/Predina/BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "Predina/Google-Maps-iOS-Utils/BridgingHeader.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -787,7 +791,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.somnath.Predina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = /Volumes/Partition/Predina/BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "Predina/Google-Maps-iOS-Utils/BridgingHeader.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -175,7 +175,7 @@
         GMSMarker *strongMarker = weakMarker;
         GMSMapView *strongMap = weakMap;
         strongMarker.icon = image;
-        if (!_isMapCleared) {
+          if (!self->_isMapCleared) {
           strongMarker.map = strongMap;
         }
       });
